@@ -17,6 +17,7 @@ public class Car {
         if (this.yearProduction < car.yearProduction) {
             return -1;
         }
+        return 0;
     }
 
     public int getYearProduction() {

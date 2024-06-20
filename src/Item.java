@@ -26,6 +26,10 @@ public class Item {
     }
 
     public void show() {
+        System.out.println("Name: " + name);
+    }
+
+    public void showCodeAndName() {
         System.out.println("Code: " + code);
         System.out.println("Name: " + name);
     }

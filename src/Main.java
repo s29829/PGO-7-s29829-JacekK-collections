@@ -1,35 +1,54 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class Main {
 
     public static void main(String[] args) {
 
-//        Zadanie 1.
+//      Zadanie 1.
         ArrayList<Car> car = new ArrayList<>();
 
-//        Zadanie 2.
-        ArrayList<Item> items = new ArrayList<>();
-        items.add(new Item("10345", "Spoon steel"));
-        items.add(new Item("10256", "Spoon silver"));
-        items.add(new Item("20056", "Plate white"));
-        items.add(new Item("20077", "Big plate white"));
-        items.add(new Item("51123", "Pho soup"));
-        items.add(new Item("40087","Chicken with rice"));
+//      Zadanie 2.
+        zadanie02();
 
-        for (Item item : items) {
+
+//      Zadanie 3.
+//        zadanie03();
+
+//      Zadanie 4.
+
+
+//      Sample from lesson.
+        sampleFromWordToTrashAtTheEnd();
+    }
+    private static void zadanie02() {
+        ArrayList<Item> zad2Item = new ArrayList<>();
+        zad2Item.add(new Item("10345", "Spoon steel"));
+        zad2Item.add(new Item("10256", "Spoon silver"));
+        zad2Item.add(new Item("20056", "Plate white"));
+        zad2Item.add(new Item("20077", "Big plate white"));
+        zad2Item.add(new Item("51123", "Pho soup"));
+        zad2Item.add(new Item("40087","Chicken with rice"));
+
+        for (Item item : zad2Item) {
             item.show();
         }
-        ArrayList<Object> itemsHasMap = new ArrayList<>();
+
         HashMap<String, String> objectObjectHashMap = new HashMap<>();
 
-        for (Item item : items) {
+        for (Item item : zad2Item) {
             objectObjectHashMap.put(item.getCode(), item.getName());
         }
+//        HashMap<Object, Object> map;
+//        Set<Map.Entry<String, Integer>> actualValues = new  map.entrySet();
+        Set<Map.Entry<String, String>> zad2Map = objectObjectHashMap.entrySet();
+//        System.out.println(objectObjectHashMap.entrySet());
+//        System.out.println(zad2Map);
+        for (Map.Entry<String, String> entry : zad2Map) {
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+        }
+    }
 
-        System.out.println(objectObjectHashMap.entrySet());
-
+    private static void zadanie03() {
         ArrayList<Item> booksSandersson = new ArrayList<>();
         booksSandersson.add(new Item("ISBN 978-83-7480-080-8", "The Final Empire"));
         booksSandersson.add(new Item("ISBN 978-83-7480-153-9", "The Well of Ascension"));
@@ -45,7 +64,23 @@ public class Main {
         for (Item item : booksSandersson) {
             System.out.println("Code: "+item.getCode()+"Name: "+item.getName());
         }
-        System.out.println(booksSandersson.toString());
+
+
+        List<Item> shortListOfBooks = new ArrayList<>();
+        shortListOfBooks = booksSandersson.subList(0,5);
+        System.out.println("___________short");
+        for (Item item : shortListOfBooks) {
+            System.out.println("Code: "+item.getCode()+"Name: "+item.getName());
+        }
+    }
+
+    private static void sampleFromWordToTrashAtTheEnd() {
+        HashSet<Object> booksyHashSet = new HashSet<>();
+//        new ArrayList<>()
+
+
+//        shortListOfBooks = (ArrayList<Item>) booksSandersson.subList(0, 5);
+//        System.out.println(booksSandersson.toString());
 //        Zadanie 3.
 
 //        Zadanie 4.
@@ -76,4 +111,5 @@ public class Main {
 //            System.out.println(entry.getKey() + " : " + entry.getValue());
 //        }
     }
+
 }

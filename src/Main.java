@@ -5,20 +5,27 @@ public class Main {
     public static void main(String[] args) {
 
 
-
+//        static Scanner inputKeyboard = new Scanner();
+        System.out.println("PGO 7 collection - s29829 - Jacek K");
 //      Zadanie 2.
+        System.out.println("Zadanie 02");
         zadanie02();
+        pressEnterToContinue();
 
 
-//      Zadanie 3.
+        System.out.println("Zadanie 03");
         zadanie03();
+        pressEnterToContinue();
 
 
-//      Zadanie 1.
+        System.out.println("Zadanie 01");
         zadanie01();
+        pressEnterToContinue();
 
 
-//      Zadanie 4.
+        System.out.println("Zadanie 02");
+
+        pressEnterToContinue();
 
 
 //      Sample from lesson.
@@ -55,7 +62,7 @@ public class Main {
 
         Set<Map.Entry<String, String>> zad2Map = objectObjectHashMap.entrySet();
 //        System.out.println(zad2Map);
-        System.out.println("\nIteration )");
+        System.out.println("\n____2A. Iteration ON map ");
 
         for (Map.Entry<String, String> entry : zad2Map) {
             System.out.println(entry.getKey() + ": " + entry.getValue());
@@ -167,4 +174,13 @@ public class Main {
 //        }
     }
 
+
+    private static void pressEnterToContinue() {
+        System.out.println("Press Enter key to continue...");
+        try {
+            Scanner scanner = new Scanner(System.in);
+            scanner.nextLine();
+        } catch (Exception e) {
+        }
+    }
 }

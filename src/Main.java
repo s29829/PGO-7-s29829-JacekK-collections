@@ -5,31 +5,27 @@ public class Main {
     public static void main(String[] args) {
 
 
-//        static Scanner inputKeyboard = new Scanner();
         System.out.println("PGO 7 collection - s29829 - Jacek K");
-//      Zadanie 2.
-        System.out.println("Zadanie 02");
+        System.out.println("\nZadanie 02");
         zadanie02();
-        pressEnterToContinue();
+//        pressEnterToContinue();
 
 
         System.out.println("Zadanie 03");
         zadanie03();
-        pressEnterToContinue();
+//        pressEnterToContinue();
 
 
-        System.out.println("Zadanie 01");
-        zadanie01();
-        pressEnterToContinue();
+//        System.out.println("Zadanie 01");
+//        zadanie01();
+//        pressEnterToContinue();
+//
+//
+        System.out.println("\nZadanie 04");
+        zadanie04();
 
 
-        System.out.println("Zadanie 02");
-
-        pressEnterToContinue();
-
-
-//      Sample from lesson.
-        sampleFromWordToTrashAtTheEnd();
+//        sampleFromWordToTrashAtTheEnd();
     }
 
 
@@ -53,19 +49,14 @@ public class Main {
             objectObjectHashMap.put(item.getCode(), item.getName());
         }
 
-        System.out.println("\n____1. option - Show HasMap.entrySet )");
-
+        System.out.println("\n____1. option I - Show HasMap.entrySet )");
         System.out.println(objectObjectHashMap.entrySet());
 
 
-        System.out.println("\n____2. option - change to Map )");
+        System.out.println("\n____2. option II - show Key+Value )");
+        for (Map.Entry<String, String> entry : objectObjectHashMap.entrySet()) {
+            System.out.println("Key: " + entry.getKey() + " Value: " + entry.getValue());
 
-        Set<Map.Entry<String, String>> zad2Map = objectObjectHashMap.entrySet();
-//        System.out.println(zad2Map);
-        System.out.println("\n____2A. Iteration ON map ");
-
-        for (Map.Entry<String, String> entry : zad2Map) {
-            System.out.println(entry.getKey() + ": " + entry.getValue());
         }
     }
 
@@ -136,42 +127,30 @@ public class Main {
         }
     }
 
+    private static void zadanie04() {
+
+    }
+
     private static void sampleFromWordToTrashAtTheEnd() {
         HashSet<Object> booksyHashSet = new HashSet<>();
-//        new ArrayList<>()
 
 
-//        shortListOfBooks = (ArrayList<Item>) booksSandersson.subList(0, 5);
-//        System.out.println(booksSandersson.toString());
-//        Zadanie 3.
+        Map<Integer, String> employees = new HashMap<>();
+        employees.put(111, "Jan Kowalski");
+        employees.put(333, "Wojciech Kowalski");
+        employees.put(222, "Kasia Piotrowska");
 
-//        Zadanie 4.
-//        Utwórz własną klasę wyjątku o nazwie NegativeNumberException.
-////        Utwórz pustą tablicę o rozmiarze 10 dla typu int.
-//        Utwórz metodę readNumber() zwracającą wartość wczytaną od
-//        użytkownika(skorzystaj z pakieu java.util.Scanner).
-//        Jeśli użytkownik poda liczbę mniejszą od 0 rzuć zdefiniowany
-//        wyjątek z wiadomością "Negative numbers are not allowed".Utwórz metodę fillArray () wrzucającą wartości
-//        zwracane przez metodę readNumber () do tablicy, jeśli metoda readNumber () podczas swojego działania rzuci
-//        wyjątek, obsłuż go wrzucając do tablicy wartość 0 i wyświetlając na konsoli wiadomość wyjątku.
+        System.out.println("Employee amount: " + employees.size());
 
+        Set<Integer> keySet = employees.keySet();
+        System.out.println("Keys:\n" + keySet);
+        Collection<String> values = employees.values();
+        System.out.println("Values:\n" + values);
 
-//        Map<Integer, String> employees = new HashMap<>();
-//        employees.put(111, "Jan Kowalski");
-//        employees.put(333, "Wojciech Kowalski");
-//        employees.put(222, "Kasia Piotrowska");
-//
-//        System.out.println("Employee amount: " + employees.size());
-//
-//        Set<Integer> keySet = employees.keySet();
-//        System.out.println("Keys:\n" + keySet);
-//        Collection<String> values = employees.values();
-//        System.out.println("Values:\n" + values);
-//
-//        Set<Map.Entry<Integer,String>> entrySet = employees.entrySet();
-//        for(Map.Entry<Integer, String> entry: entrySet) {
-//            System.out.println(entry.getKey() + " : " + entry.getValue());
-//        }
+        Set<Map.Entry<Integer, String>> entrySet = employees.entrySet();
+        for (Map.Entry<Integer, String> entry : entrySet) {
+            System.out.println(entry.getKey() + " : " + entry.getValue());
+        }
     }
 
 
